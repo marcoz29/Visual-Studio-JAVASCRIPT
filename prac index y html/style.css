@@ -1,0 +1,65 @@
+:root{
+    --red-color: rgb(211, 79, 79);
+}
+
+h1{
+    background-color: rgb(169, 117, 21); /*  #47A592   */
+    left: 0;
+    margin: auto;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    color: aquamarine;
+}
+
+h2{
+    color: crimson;
+background-color: rgb(71, 165, 146 );
+}
+
+.imagen,
+.video{
+    text-align: center;
+}
+
+.imagen > p{
+    color: white;
+    left: 50%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.imagen img,
+.video video{
+    max-width: 400px;
+    width: 100%;
+}
+
+.imagen{
+    position: relative;
+}
+
+.texto-rojo{
+    color: red;
+    
+}
+
+.texto-rojo:hover{
+    color: purple;
+}
+
+
+.dos-columnas {
+    display: flex;
+}
+
+.dos-columnas ol,
+.dos-columnas ul {
+    width: 50%;
+}
+ 
+tr:hover{
+    color: rgb(67, 253, 0);
+}

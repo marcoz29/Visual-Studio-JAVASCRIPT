@@ -1,0 +1,205 @@
+.width-5 {
+  width: 5%;
+}
+
+.width-10 {
+  width: 10%;
+}
+
+.width-15 {
+  width: 15%;
+}
+
+.width-20 {
+  width: 20%;
+}
+
+.width-25 {
+  width: 25%;
+}
+
+.width-30 {
+  width: 30%;
+}
+
+.width-35 {
+  width: 35%;
+}
+
+.width-40 {
+  width: 40%;
+}
+
+.width-45 {
+  width: 45%;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+body {
+  background-color: black;
+}
+
+h1 {
+  background-color: black;
+  color: #ff8080;
+}
+
+b {
+  background-color: white;
+  color: white;
+  text-align: left;
+  left: 70px;
+  font-family: Arial;
+  position: absolute;
+  background-color: black;
+  font-size: 30px;
+  top: 75%;
+}
+
+.text1 {
+  background-color: purple;
+  color: white;
+  text-align: left;
+  position: absolute;
+  right: 62%;
+  left: 70px;
+  font-family: Arial;
+  background-color: black;
+}
+.text1 strong {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.imagen, img {
+  height: 250px;
+  width: 400px;
+  position: relative;
+  left: 34px;
+}
+
+.selector1 {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  left: 85px;
+  font-size: 28px;
+  cursor: pointer;
+  width: fit-content;
+  margin: 0 auto 48px;
+  z-index: 0;
+  transition: all 450ms ease;
+  padding: 0 6px;
+}
+.selector1::after, .selector1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  transition: width 540ms, opacity 30;
+}
+.selector1::before, .selector1::after {
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  height: 0.1em;
+  width: 0;
+}
+.selector1::before {
+  left: 0;
+}
+.selector1::after {
+  background-color: #FF0000;
+  right: 0;
+}
+.selector1:hover {
+  color: #FF0000;
+}
+.selector1:hover::before {
+  width: 60%;
+  transition: width 250ms ease;
+  background-color: #FF0000;
+}
+.selector1:hover::after {
+  width: 100%;
+  background-color: transparent;
+}
+
+.selector2 {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  left: 80px;
+  font-size: 28px;
+  cursor: pointer;
+  width: fit-content;
+  margin: 0 auto 48px;
+  z-index: 0;
+  transition: all 450ms ease;
+  padding: 0 6px;
+}
+.selector2::after, .selector2::before {
+  content: "";
+  display: block;
+  position: absolute;
+  transition: width 540ms, opacity 30;
+}
+.selector2::before, .selector2::after {
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  height: 0.1em;
+  width: 0;
+}
+.selector2::before {
+  left: 0;
+}
+.selector2::after {
+  background-color: #4DFFFF;
+  right: 0;
+}
+.selector2:hover {
+  color: #4DFFFF;
+}
+.selector2:hover::before {
+  width: 60%;
+  transition: width 250ms ease;
+  background-color: #4DFFFF;
+}
+.selector2:hover::after {
+  width: 100%;
+  background-color: transparent;
+}
+
+.link1 {
+  padding: 2px 1px 0;
+  color: #4DFFFF;
+  position: relative;
+  text-align: center;
+  left: 93%;
+}
+
+.link2 {
+  padding: 2px 1px 0;
+  color: green;
+  position: relative;
+  text-align: center;
+  left: 93%;
+}
+
+.link3 {
+  padding: 2px 1px 0;
+  color: green;
+  position: relative;
+  text-align: center;
+  left: 93%;
+}
+
+/*# sourceMappingURL=style.css.map */

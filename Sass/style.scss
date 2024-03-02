@@ -1,0 +1,217 @@
+$color-principal: #4DFFFF;
+$red: #FF0000;
+$alto: 100px;
+$ancho: 200px;
+$alinear: left;
+$color-fondo: black;
+$blanco: white;
+
+@mixin condicional($color){
+    background-color: ($color);   
+
+
+@if $color == black {
+    $color-lightred: lighten($red, 25%);
+    color: $color-lightred;
+} @else if $color == purple{
+    color: $blanco;
+    text-align: left;
+    position: absolute;
+    right: 62%;
+    left: 70px;
+    font-family:Arial;
+    background-color: $color-fondo;
+    //border: 2px solid $blanco;
+} @else {
+    color: $blanco;
+    text-align: left;
+    left: 70px;
+    font-family:Arial;
+    position: absolute;
+    background-color: $color-fondo;
+    font-size: 30px;
+}
+}
+
+//bucle
+@function ismultiplo5($i){
+    @return($i % 5 == 0);
+}
+@for $i from 5 through 50{
+    @if(ismultiplo5($i)){
+        .width-#{$i}{
+            width: 0% + $i;
+        }
+    }
+}//fin del bucle
+
+body{
+    background-color: $color-fondo;
+}
+h1{
+    @include condicional(black);
+}
+
+b{
+    @include condicional(white);
+    top: 75%;
+}
+
+.text1{ //anidacion
+    @include condicional(purple);
+    strong{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+}
+
+.imagen, img{
+   height: $alto + 150px; //operacion matematica
+   width: $ancho + 200px;
+   position: relative;
+   left: 14px + 20px;
+}
+
+.selector1 { //boton 1 caracteristicas
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    color: $blanco;
+    text-decoration: none;
+    text-align: center;
+    left: 80px + 5px;
+    font-size: 28px;
+    cursor: pointer;
+    width: fit-content;
+    margin: 0 auto 48px;
+    z-index: 0;
+    transition: all 450ms ease;
+
+    &::after,
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        transition: width 540ms, opacity 30;
+    }
+
+    padding: 0 6px;
+
+    &::before,
+    &::after{
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        height: 0.1em;
+        width: 0;
+    }
+
+    &::before{
+        left: 0;
+    }
+
+    &::after{
+        background-color: $red;
+        right: 0;
+    }
+
+    &:hover{
+
+        color: $red;
+
+        &::before{
+            width: 60%;
+            transition: width 250ms ease;
+            background-color: $red;
+        }
+
+        &::after{
+            width: 100%;
+            background-color: transparent;
+        }
+    }
+}
+
+.selector2 { //boton 2 caracteristicas
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    color: $blanco;
+    text-decoration: none;
+    text-align: center;
+    left: 60px + 20px;
+    font-size: 28px;
+    cursor: pointer;
+    width: fit-content;
+    margin: 0 auto 48px;
+    z-index: 0;
+    transition: all 450ms ease;
+
+    &::after,
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        transition: width 540ms, opacity 30;
+    }
+
+    padding: 0 6px;
+
+    &::before,
+    &::after{
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        height: 0.1em;
+        width: 0;
+    }
+
+    &::before{
+        left: 0;
+    }
+
+    &::after{
+        background-color: $color-principal;
+        right: 0;
+    }
+
+    &:hover{
+
+        color: $color-principal;
+
+        &::before{
+            width: 60%;
+            transition: width 250ms ease;
+            background-color: $color-principal;
+        }
+
+        &::after{
+            width: 100%;
+            background-color: transparent;
+        }
+    }
+}
+
+.link1{
+    padding: 2px 1px 0;
+    color: $color-principal;
+    position: relative;
+    text-align: center;
+    left: 93%;
+}
+
+.link2{
+    padding: 2px 1px 0;
+    color: green;
+    position: relative;
+    text-align: center;
+    left: 93%;
+}
+
+.link3{
+    padding: 2px 1px 0;
+    color: green;
+    position: relative;
+    text-align: center;
+    left: 93%;
+}

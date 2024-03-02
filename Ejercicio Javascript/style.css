@@ -1,0 +1,10 @@
+.reloj{
+    color:burlywood;
+    font-size: 120px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 5px;
+    text-align: center;
+    background-color: chocolate;
+    border: 10px solid #091321;
+    border-radius: 20px;
+}

@@ -1,0 +1,216 @@
+@color-principal: #4DFFFF;
+@red: #FF0000;
+@alto: 100px;
+@ancho: 200px;
+@alinear: left;
+@color-fondo: black;
+@blanco: white;
+
+body{
+    background-color: @color-fondo;
+}
+.establecer_h1(@color) when (@color = black){
+    @color-lightred: lighten(@red, 25%);
+    color: @color-lightred;
+}
+
+h1{
+    .establecer_h1(black);
+}
+
+.imagen, img{
+   height: @alto + 150px; //operacion matematica
+   width: @ancho + 200px;
+   position: relative;
+   left: 14px + 20px;
+}
+
+.establecer_b(@color) when (@color = white){
+    color: @blanco;
+    text-align: left;
+    left: 70px;
+    font-family:Arial;
+    position: absolute;
+    background-color: @color-fondo;
+    font-size: 30px;
+    top: 75%;
+}
+
+b{
+    .establecer_b(white);
+}
+
+.establecer_text1(@color) when (@color = purple){
+    color: @blanco;
+    text-align: left;
+    position: absolute;
+    right: 62%;
+    left: 70px;
+    font-family:Arial;
+    background-color: @color-fondo;
+}
+
+.text1{
+    .establecer_text1(purple);
+    strong{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+
+.selector1 { //boton 1 caracteristicas
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    color: @blanco;
+    text-decoration: none;
+    text-align: center;
+    left: 80px + 5px;
+    font-size: 28px;
+    cursor: pointer;
+    width: fit-content;
+    margin: 0 auto 48px;
+    z-index: 0;
+    transition: all 450ms ease;
+
+    &::after,
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        transition: width 540ms, opacity 30;
+    }
+
+    padding: 0 6px;
+
+    &::before,
+    &::after{
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        height: 0.1em;
+        width: 0;
+    }
+
+    &::before{
+        left: 0;
+    }
+
+    &::after{
+        background-color: @red;
+        right: 0;
+    }
+
+    &:hover{
+
+        color: @red;
+
+        &::before{
+            width: 60%;
+            transition: width 250ms ease;
+            background-color: @red;
+        }
+
+        &::after{
+            width: 100%;
+            background-color: transparent;
+        }
+    }
+}
+
+.selector2 { //boton 2 caracteristicas
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    color: @blanco;
+    text-decoration: none;
+    text-align: center;
+    left: 60px + 20px;
+    font-size: 28px;
+    cursor: pointer;
+    width: fit-content;
+    margin: 0 auto 48px;
+    z-index: 0;
+    transition: all 450ms ease;
+
+    &::after,
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        transition: width 540ms, opacity 30;
+    }
+
+    padding: 0 6px;
+
+    &::before,
+    &::after{
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        height: 0.1em;
+        width: 0;
+    }
+
+    &::before{
+        left: 0;
+    }
+
+    &::after{
+        background-color: @color-principal;
+        right: 0;
+    }
+
+    &:hover{
+
+        color: @color-principal;
+
+        &::before{
+            width: 60%;
+            transition: width 250ms ease;
+            background-color: @color-principal;
+        }
+
+        &::after{
+            width: 100%;
+            background-color: transparent;
+        }
+    }
+}
+
+.link1{
+    padding: 2px 1px 0;
+    color: @color-principal;
+    position: relative;
+    text-align: center;
+    left: 93%;
+}
+
+.link2{
+    padding: 2px 1px 0;
+    color: rgb(145, 255, 0);
+    position: relative;
+    text-align: center;
+    left: 93%;
+}
+
+.link3{
+    padding: 2px 1px 0;
+    color: rgb(230, 90, 223);
+    position: relative;
+    text-align: center;
+    left: 93%;
+}
+
+//bucle
+.crear-grid-fijo(@ancho; @columnas; @i: 1) when (@i =< @columnas) {
+    .col-f-@{i} {
+      width: ((@i / @columnas) * @ancho) - ((@ancho / @columnas) * 0.1);
+      margin-left: (@ancho / @columnas) * 0.05;
+      margin-right:(@ancho / @columnas) * 0.05;
+    }
+  
+    .crear-grid-fijo(@ancho; @columnas; (@i + 3));
+  }  
+  
+  .crear-grid-fijo(1200px, 17); 
+  //fin del bucle

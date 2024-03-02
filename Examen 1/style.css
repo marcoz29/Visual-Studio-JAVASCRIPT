@@ -1,0 +1,64 @@
+.title{
+margin: auto;
+position: relative;
+left: 1130px;
+width: 100%;
+font-family: Arial;
+}
+
+.text{
+margin: auto;
+text-align: right; 
+font-size: 12px;
+bottom: 0;
+font-family: Arial;
+}
+
+.title1{
+    margin: auto;
+    text-align: left;
+    font-family: Arial;
+}
+
+.text1{
+margin: auto;
+text-align: left;
+position: relative;
+right: 29%;
+width: 40%;
+}
+
+.text2{
+margin: auto;
+text-align: right;
+left: 70%;
+position: absolute;
+top: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.imagen{
+    margin: auto;
+    position: absolute;
+}
+
+.html{
+    text-align: center;
+    position: relative;
+    right: 10%;
+}
+
+.text3{
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    left: 20%;
+    right: 25%;
+}
+
+.table{
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    left: 200%;
+}
